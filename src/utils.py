@@ -14,6 +14,8 @@ def displayExercise():
             exercise2()
         elif exerciseId == 4:
             exercise4()
+        elif exerciseId == 6:
+            exercise6()
         else:
             exerciseId = 0
             print (emptyexerciseIdMessage)
@@ -82,3 +84,19 @@ def toPascalCase(parameterStr):
             returnStr += upperStr + " "
 
     return returnStr.rstrip()
+
+
+def exercise6():
+    try:
+        inputInt= int(input("Ingrese un numero entero: "))
+        triangleInt(inputInt)
+    except ValueError:
+        print("Error: No se ingreso un numero valido")
+    
+
+def triangleInt(parameterInt):
+    """Recibe un numero entero y imprima por salida estandar(usando print) un triangulo de numeros de altura igual al numero ingresado"""
+
+    for indice in range(1 , parameterInt+1):
+        print(str(indice)*indice)
+    

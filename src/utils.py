@@ -86,6 +86,40 @@ def toPascalCase(parameterStr):
     return returnStr.rstrip()
 
 
+def exercise5 (): # Utilizando iteración y condicionales. Si hay mas de dos números iguales lo devuelve en la salida. 
+    lista = [2,6,10,10,7,5,6]
+    lista.sort(reverse =True)
+     
+    for i in range (len(lista)):
+         if (lista[i + 2]) == (lista[i + 1]):
+              print ("Hay mas de dos notas altas iguales")
+              break
+         elif (lista[i + 1]) == (lista[i]):
+               print (lista [i + 2])                
+               break
+         else:
+              print (lista [i + 1])
+              break
+   
+exercise5 ()
+
+def exercise5_b (): # Utilizando metodos de listas y condicionales. Si hay mas de dos números iguales lo devuelve en la salida. 
+     lista = [2,6,10,10,7,5,6]
+     lista.sort(reverse =True)
+     mayor = (max(lista))
+     contador = lista.count(mayor)
+     if contador <= 1:
+         print (lista[1])
+     elif contador <=2:
+         print (lista [2])
+     else:
+         print ("Hay mas de dos notas altas iguales")
+             
+   
+    
+exercise5_b ()
+
+
 def exercise6():
     try:
         inputInt= int(input("Ingrese un numero entero: "))

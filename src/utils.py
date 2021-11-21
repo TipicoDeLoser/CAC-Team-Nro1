@@ -12,6 +12,8 @@ def displayExercise():
             exercise1()
         elif exerciseId == 2:
             exercise2()
+        elif exerciseId == 3:
+            exercise3()
         elif exerciseId == 4:
             exercise4()
         elif exerciseId == 6:
@@ -61,6 +63,24 @@ def changeLeters(parameterStr):
                 parameterStr[indice].upper()
                 returnStr += parameterStr[indice].upper()
     return returnStr
+
+
+def exercise3():
+    text = input("Por favor, ingrese un texto inspirador: ")
+    letter = input("Cuál es su letra favorita?: ")
+    number = input("Y su número de la suerte?: ")
+    print(change_letter(text, letter, number))
+
+def change_letter(t, l, n):
+
+    n = int(n)
+    t = str(t)
+    l=str(l)
+
+    if n < len(t):
+        return t[:n-1] + l + t[n:]
+    else:
+        print("El número debería ser menor a ", len(t))
 
 
 def exercise4():

@@ -18,6 +18,8 @@ def displayExercise():
             exercise4()
         elif exerciseId == 6:
             exercise6()
+        elif exerciseId == 7:
+            exercise7()
         else:
             exerciseId = 0
             print (emptyexerciseIdMessage)
@@ -41,10 +43,10 @@ def guionXEspacio(parameterStr):
 
 def exercise2():
     inputStr= input("Ingrese un texto de hasta 100 caracteres: ")
-    print(changeLeters(inputStr))
+    print(changeLetters(inputStr))
 
 
-def changeLeters(parameterStr):
+def changeLetters(parameterStr):
     """Reemplaza mayusculas por minusculas y visceversa"""
 
     returnStr = ""
@@ -153,4 +155,32 @@ def triangleInt(parameterInt):
 
     for indice in range(1 , parameterInt+1):
         print(str(indice)*indice)
+
+
+
+def exercise7():
+    inputStr= input("Ingrese el nombre de la empresa: ")
+    countLetters(inputStr)
+
+
+def countLetters(parameterStr):
+    """Reemplaza mayusculas por minusculas y visceversa"""
+
     
+    empryStringMessage = "Error: Nombre no ingresado"
+
+    if not parameterStr:
+        return  empryStringMessage
+    else:
+        
+        letters = (parameterStr.replace(" ", "")).lower()
+        conj = set(letters)
+        dict1 = {}
+
+        for i in conj:
+            counts = letters.count(i)
+            dict1[i] = counts
+
+        sortedDict = sorted(dict1.items(), key=lambda x: -x[1])
+        for i in range (0,3):
+            print(sortedDict[i][0] + ' ' +  str(sortedDict[i][1]))

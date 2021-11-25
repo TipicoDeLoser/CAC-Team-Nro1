@@ -2,6 +2,7 @@ from src.clases.NumeroComplejo import NumeroComplejo
 from src.clases.vector import Vector
 
 from src.clases.Aplicacion import Aplicacion
+
 from src.clases.Administrador import Administrador
 from src.clases.Reportero import Reportero
 from src.clases.Producto import Producto
@@ -21,6 +22,7 @@ print(str(x) + ' * ' + str(y) + ' = ' + str(x.multiplicar(y)))
 print(str(x) + ' / ' + str(y) + ' = ' + str(x.dividir(y)))
 
 print("-----------------------------------------------")
+
 # Ejercicio 2-2
 
 a = Vector(4,2,6)
@@ -67,3 +69,4 @@ admin.mostrar_info_clientes(appInfo)
 
 reporter.muestra_Rol()
 reporter.mostrar_info_clientes(appInfo)
+

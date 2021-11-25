@@ -12,6 +12,8 @@ def displayExercise():
             exercise1()
         elif exerciseId == 2:
             exercise2()
+        elif exerciseId == 3:
+            exercise3()
         elif exerciseId == 4:
             exercise4()
         elif exerciseId == 6:
@@ -65,6 +67,24 @@ def changeLetters(parameterStr):
     return returnStr
 
 
+def exercise3():
+    text = input("Por favor, ingrese un texto inspirador: ")
+    letter = input("Cuál es su letra favorita?: ")
+    number = input("Y su número de la suerte?: ")
+    print(change_letter(text, letter, number))
+
+def change_letter(t, l, n):
+
+    n = int(n)
+    t = str(t)
+    l=str(l)
+
+    if n < len(t):
+        return t[:n-1] + l + t[n:]
+    else:
+        print("El número debería ser menor a ", len(t))
+
+
 def exercise4():
     inputStr= input("Ingrese su nombre y apellido: ")
     print(toPascalCase(inputStr))
@@ -86,6 +106,40 @@ def toPascalCase(parameterStr):
             returnStr += upperStr + " "
 
     return returnStr.rstrip()
+
+
+def exercise5 (): # Utilizando iteración y condicionales. Si hay mas de dos números iguales lo devuelve en la salida. 
+    lista = [2,6,10,10,7,5,6]
+    lista.sort(reverse =True)
+     
+    for i in range (len(lista)):
+         if (lista[i + 2]) == (lista[i + 1]):
+              print ("Hay mas de dos notas altas iguales")
+              break
+         elif (lista[i + 1]) == (lista[i]):
+               print (lista [i + 2])                
+               break
+         else:
+              print (lista [i + 1])
+              break
+   
+exercise5 ()
+
+def exercise5_b (): # Utilizando metodos de listas y condicionales. Si hay mas de dos números iguales lo devuelve en la salida. 
+     lista = [2,6,10,10,7,5,6]
+     lista.sort(reverse =True)
+     mayor = (max(lista))
+     contador = lista.count(mayor)
+     if contador <= 1:
+         print (lista[1])
+     elif contador <=2:
+         print (lista [2])
+     else:
+         print ("Hay mas de dos notas altas iguales")
+             
+   
+    
+exercise5_b ()
 
 
 def exercise6():

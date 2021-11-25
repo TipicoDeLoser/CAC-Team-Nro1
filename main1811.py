@@ -1,5 +1,7 @@
-from src.clases.Aplicacion import Aplicacion
 from src.clases.NumeroComplejo import NumeroComplejo
+from src.clases.vector import Vector
+
+from src.clases.Aplicacion import Aplicacion
 
 from src.clases.Administrador import Administrador
 from src.clases.Reportero import Reportero
@@ -18,6 +20,23 @@ print(str(x) + ' - ' + str(y) + ' = ' + str(x.restar(y)))
 print(str(x) + ' * ' + str(y) + ' = ' + str(x.multiplicar(y)))
 
 print(str(x) + ' / ' + str(y) + ' = ' + str(x.dividir(y)))
+
+print("-----------------------------------------------")
+
+# Ejercicio 2-2
+
+a = Vector(4,2,6)
+b = Vector(2,6,4)
+c = 2
+
+print(str(a) + ' + ' + str(b) + ' = ' + str(a.sumar(b)))
+
+print(str(a) + ' - ' + str(b) + ' = ' + str(a.restar(b)))
+
+print(str(a) + ' * ' + str(c) + ' = ' + str(a.multiplicar(c)))
+
+print(str(a) + ' / ' + str(c) + ' = ' + str(a.dividir(c)))
+
 
 print("-----------------------------------------------")
 
@@ -50,3 +69,4 @@ admin.mostrar_info_clientes(appInfo)
 
 reporter.muestra_Rol()
 reporter.mostrar_info_clientes(appInfo)
+
